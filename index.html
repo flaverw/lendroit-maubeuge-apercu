@@ -1,76 +1,76 @@
-<!-- cadenas-everywhere -->
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Accès protégé — Everywhere</title>
+<title>L'Endroit — démonstration Everywhere</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--noir:#14110f;--or:#c9a24b;--creme:#f3ecdd}
+:root{--noir:#0d0b0c;--noir2:#161314;--rouge:#b60f26;--creme:#f7f4ef;--or:#c9a24b;--sapin:#22453a}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;min-height:100vh;
- background:radial-gradient(120% 120% at 50% 0%,#241f1a,var(--noir));color:var(--creme);
- display:flex;align-items:center;justify-content:center;padding:24px}
-.card{max-width:420px;width:100%;text-align:center}
-.mark{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--or);margin-bottom:18px}
-.lock{font-size:40px;margin-bottom:14px}
-h1{font-size:22px;font-weight:600;line-height:1.25;margin-bottom:8px}
-p.sub{font-size:14px;color:#b9b0a0;margin-bottom:22px;line-height:1.5}
-form{display:flex;gap:8px;flex-direction:column}
-input{width:100%;background:#1c1814;border:1px solid rgba(201,162,75,.4);color:var(--creme);
- padding:14px 16px;font-size:16px;border-radius:8px;text-align:center;letter-spacing:.05em}
-input:focus{outline:none;border-color:var(--or)}
-button{background:var(--or);color:var(--noir);border:none;padding:14px;font-size:15px;font-weight:600;
- border-radius:8px;cursor:pointer;letter-spacing:.03em}
-button:hover{filter:brightness(1.08)}
-.err{color:#e6857a;font-size:13px;min-height:18px;margin-top:4px}
-.foot{margin-top:26px;font-size:11px;color:#7c7364;line-height:1.5}
-</style></head>
+body{font-family:'Jost',sans-serif;min-height:100vh;background:var(--noir);color:var(--creme);display:flex;align-items:center;justify-content:center;padding:26px;font-weight:300}
+.hub{max-width:760px;width:100%;text-align:center}
+.sur{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--or);margin-bottom:8px}
+.nom{font-family:'Great Vibes',cursive;font-size:clamp(52px,9vw,74px);line-height:1;margin-bottom:4px}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(20px,3.4vw,27px);line-height:1.2;color:#ded7cd}
+h1 em{font-style:italic;color:var(--or)}
+.sous{margin:14px auto 30px;color:#b9b2ab;max-width:52ch;font-size:15px}
+a.porte{display:flex;align-items:center;gap:18px;text-align:left;text-decoration:none;color:inherit;background:rgba(247,244,239,.05);border:1px solid rgba(182,15,38,.45);border-radius:12px;padding:24px 26px;margin-bottom:14px;transition:.2s}
+a.porte:hover{border-color:var(--rouge);background:rgba(247,244,239,.09);transform:translateY(-2px)}
+a.porte .ic{font-size:32px;flex-shrink:0}
+a.porte .tx{flex:1}
+a.porte .l{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--rouge);filter:brightness(1.6)}
+a.porte h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;color:var(--creme);margin:5px 0 6px}
+a.porte p{font-size:14px;color:#b9b2ab;line-height:1.5}
+a.porte .go{margin-left:auto;font-size:22px;color:var(--or);flex-shrink:0}
+a.etude{background:linear-gradient(100deg,var(--sapin),#356453);border-color:#4d7a67}
+a.etude .l{color:#9fd0b8;filter:none}
+a.offre{border-color:rgba(201,162,75,.55)}
+a.offre:hover{border-color:var(--or)}
+a.offre .l{color:var(--or);filter:none}
+.pied{margin-top:28px;font-size:12px;color:#7c756d}
+@media(max-width:620px){a.porte{flex-direction:column;text-align:center}a.porte .go{margin:0}}
+</style>
+</head>
 <body>
-<div class="card">
-  <div class="mark">Everywhere</div>
-  <div class="lock">&#128274;</div>
-  <h1>Accès protégé</h1>
-  <p class="sub">Cette démonstration est réservée. Saisissez votre code d'accès pour la consulter.</p>
-  <form id="f"><input id="pw" type="password" placeholder="Code d'accès" autocomplete="off" autofocus>
-  <button type="submit">Entrer</button></form>
-  <div class="err" id="e"></div>
-  <div class="foot">Everywhere — cabinet d'accompagnement numérique.<br>Contenu chiffré. Un code par visiteur, communiqué par Everywhere.</div>
+<div class="hub">
+  <div class="sur">Brasserie · Le Grand Hôtel · Maubeuge — démonstration</div>
+  <div class="nom">L'Endroit</div>
+  <h1>Votre brasserie, <em>enfin chez elle</em> en ligne.</h1>
+  <p class="sous">Une maison numérique préparée à partir de vos vraies photos, de votre carte et de
+  vos avis publiés — à l'image de votre façade.</p>
+
+  <a class="porte" href="maquette/">
+    <div class="ic">🍽️</div>
+    <div class="tx"><div class="l">La maquette</div>
+      <h2>Voir votre site</h2>
+      <p>La brasserie, la carte, le brunch, la réservation qui marche — et le pont avec l'hôtel.</p></div>
+    <div class="go">→</div>
+  </a>
+
+  <a class="porte etude" href="etude/?e=L%27Endroit">
+    <div class="ic">🧮</div>
+    <div class="tx"><div class="l">En bonus · sous 48 h</div>
+      <h2>Votre étude d'économies</h2>
+      <p>Confiez-nous vos contrats (site, réservation, caisse, TPE, télécom, énergie…). On regarde ce
+      qu'on peut <b>remplacer, améliorer ou renégocier</b>. Estimation prudente, sans engagement.</p></div>
+    <div class="go">→</div>
+  </a>
+
+  <a class="porte offre" href="offre/">
+    <div class="ic">🗝️</div>
+    <div class="tx"><div class="l">L'offre</div>
+      <h2>Trois formules, à votre rythme</h2>
+      <p>Origine — le point de départ —, Singulier et Everywhere : du site de la maquette au
+      sur-mesure, tout se valide ensemble.</p></div>
+    <div class="go">→</div>
+  </a>
+
+  <p class="pied">Démonstration Everywhere — non indexée, formulaires inertes, aucune donnée collectée.
+  Contenus et tarifs repris de vos supports publiés ; tout se valide ensemble.</p>
 </div>
-<script>
-(function(){
- var D={"v":1,"iters":210000,"iv":"nwRjmpuxdu8e00MY","ct":"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","wraps":[{"role":"client","salt":"AplFMz2Wkh5t3s0a3v6z4Q==","iv":"pH7MmHGSlDMJiwp3","wrapped":"X6ie1JroONG+b26My0UUZKv65hXk7TYXDxacK9zcALoh+R+/H5cRFMlDRecVlVj6"}]};
- var dec=function(s){var b=atob(s),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u;};
- var enc=new TextEncoder();
- async function derive(pw,salt){
-  var km=await crypto.subtle.importKey('raw',enc.encode(pw),'PBKDF2',false,['deriveKey']);
-  return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:D.iters,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
- }
- async function tryUnlock(pw){
-  for(var i=0;i<D.wraps.length;i++){
-   var w=D.wraps[i];
-   try{
-    var wk=await derive(pw,dec(w.salt));
-    var ckRaw=new Uint8Array(await crypto.subtle.decrypt({name:'AES-GCM',iv:dec(w.iv)},wk,dec(w.wrapped)));
-    var ck=await crypto.subtle.importKey('raw',ckRaw,'AES-GCM',false,['decrypt']);
-    var html=new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:dec(D.iv)},ck,dec(D.ct)));
-    return {ok:true,role:w.role,html:html};
-   }catch(e){}
-  }
-  return {ok:false};
- }
- function render(html){document.open();document.write(html);document.close();}
- async function boot(){
-  var pw=null;try{pw=sessionStorage.getItem('ew_pass');}catch(e){}
-  if(pw){var r=await tryUnlock(pw);if(r.ok){render(r.html);return;}}
-  document.getElementById('f').addEventListener('submit',async function(ev){
-   ev.preventDefault();
-   var v=document.getElementById('pw').value;
-   document.getElementById('e').textContent='';
-   var r=await tryUnlock(v);
-   if(r.ok){try{sessionStorage.setItem('ew_pass',v);}catch(e){}render(r.html);}
-   else{document.getElementById('e').textContent='Code incorrect.';document.getElementById('pw').select();}
-  });
- }
- if(!crypto||!crypto.subtle){document.getElementById('e').textContent='Navigateur non compatible.';}else{boot();}
-})();
-</script>
-</body></html>
+</body>
+</html>
