@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>L'Endroit — Brasserie du Grand Hôtel, Maubeuge · version classique (démonstration)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#f6f0e5; --papier2:#efe6d6; --carte:#fbf7ee;
+  --encre:#2b2320; --brun:#5f5348; --gris:#6f6459;
+  --terracotta:#a8502e; --terracotta-f:#8a3f22;
+  --rouge:#a90e23; --or:#a8853f; --filet:rgba(95,70,40,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--papier);color:var(--encre);line-height:1.65;font-weight:300}
+img{max-width:100%;display:block}
+.script{font-family:'Great Vibes',cursive;font-weight:400}
+.serif{font-family:'Cormorant Garamond',serif}
+a{color:var(--terracotta)}
+
+/* ---- liseret enseigne ---- */
+.liseret-haut{height:4px;background:linear-gradient(90deg,transparent,var(--rouge) 18%,var(--rouge) 82%,transparent)}
+
+/* ---- bandeau coordonnées ---- */
+.topbar{background:var(--encre);color:#e9e2d6;font-size:12.5px;letter-spacing:.08em;text-align:center;padding:8px 14px}
+.topbar a{color:#e9c891;text-decoration:none}
+.topbar .sep{color:#8a7f72;margin:0 10px}
+
+/* ---- en-tête classique ---- */
+header.haut{text-align:center;padding:44px 22px 0}
+header.haut .sur{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:.42em;text-transform:uppercase;color:var(--brun)}
+header.haut .nom{font-family:'Great Vibes',cursive;font-size:clamp(58px,9vw,88px);line-height:1.05;color:var(--encre);margin:2px 0 0}
+header.haut .sous-nom{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(16px,2.4vw,20px);color:var(--terracotta)}
+nav.classique{max-width:880px;margin:26px auto 0;border-top:1px solid var(--filet);border-bottom:1px solid var(--filet);
+  display:flex;justify-content:center;flex-wrap:wrap;gap:4px 34px;padding:13px 16px}
+nav.classique a{text-decoration:none;color:var(--brun);font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;transition:.2s}
+nav.classique a:hover{color:var(--terracotta)}
+nav.classique a.resa{color:var(--terracotta-f);font-weight:500}
+
+/* ---- hero tableau ---- */
+.tableau{max-width:1040px;margin:44px auto 0;padding:0 22px}
+.cadre-photo{border:1px solid var(--or);padding:10px;background:var(--carte);box-shadow:0 18px 50px rgba(43,35,32,.18)}
+.cadre-photo .dedans{border:1px solid var(--filet);overflow:hidden;position:relative}
+.cadre-photo img{width:100%;height:min(62vh,560px);object-fit:cover;object-position:62% 38%}
+.cadre-photo figcaption{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--gris);padding:14px 10px 6px}
+.devise{text-align:center;max-width:60ch;margin:34px auto 0;padding:0 22px;font-family:'Cormorant Garamond',serif;
+  font-size:clamp(19px,2.8vw,24px);line-height:1.5;color:#463b33}
+.devise em{color:var(--terracotta);font-style:italic}
+.actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;text-decoration:none;letter-spacing:.18em;text-transform:uppercase;font-size:12.5px;font-weight:500;
+  padding:14px 30px;border-radius:2px;transition:.2s}
+.btn.plein{background:var(--terracotta);color:#fbf7ee;box-shadow:0 8px 26px rgba(168,80,46,.3)}
+.btn.plein:hover{background:var(--terracotta-f)}
+.btn.vide{border:1px solid var(--brun);color:var(--encre)}
+.btn.vide:hover{border-color:var(--terracotta);color:var(--terracotta)}
+
+/* ---- ornements ---- */
+.orn{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto 12px;color:var(--or)}
+.orn::before,.orn::after{content:'';height:1px;width:56px;background:var(--or);opacity:.55}
+.orn span{font-size:13px;letter-spacing:.1em}
+
+section{padding:78px 22px}
+.in{max-width:1040px;margin:0 auto}
+.k{text-align:center;font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--terracotta);font-weight:500;margin-bottom:12px}
+h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(28px,4.4vw,40px);line-height:1.15;text-align:center;margin-bottom:14px}
+h2 .script{font-size:1.22em;color:var(--terracotta)}
+.txt{color:#4a4038;max-width:62ch;margin:0 auto;text-align:center}
+
+/* ---- la maison ---- */
+.maison .deux{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;margin-top:40px}
+@media(max-width:860px){.maison .deux{grid-template-columns:1fr}}
+.maison .colonne .txt{text-align:left;margin:0}
+.maison .photo{border:1px solid var(--or);padding:8px;background:var(--carte)}
+.maison .photo img{width:100%;height:340px;object-fit:cover}
+.maison .photo figcaption{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--gris);text-align:center;padding-top:10px}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--filet);border:1px solid var(--filet);margin-top:44px}
+@media(max-width:760px){.atouts{grid-template-columns:1fr 1fr}}
+.atouts div{background:var(--carte);padding:20px 16px;text-align:center}
+.atouts b{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;display:block;color:var(--encre)}
+.atouts span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gris)}
+
+/* ---- menu du jour ---- */
+.jour{background:var(--papier2)}
+.menu-carte{max-width:720px;margin:38px auto 0;background:var(--carte);border:1px solid var(--terracotta);
+  box-shadow:0 16px 44px rgba(43,35,32,.14);padding:10px}
+.menu-carte .liseret-int{border:1px solid rgba(168,80,46,.4);padding:38px clamp(20px,5vw,52px) 32px;position:relative}
+.menu-carte .rosace{text-align:center;color:var(--terracotta);font-size:15px;letter-spacing:.5em;margin-bottom:6px}
+.menu-carte .titre{font-family:'Great Vibes',cursive;font-size:clamp(34px,5vw,44px);text-align:center;color:var(--encre)}
+.menu-carte .date-note{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gris);font-size:14.5px;margin-bottom:26px}
+.menu-carte h3{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--terracotta-f);text-align:center;margin:26px 0 12px}
+.menu-carte h3::after{content:'';display:block;width:40px;height:1px;background:var(--or);margin:10px auto 0;opacity:.6}
+.plat{display:flex;align-items:baseline;gap:10px;padding:7px 0}
+.plat .n{font-size:16.5px;color:var(--encre)}
+.plat .n .d{font-size:13px;color:var(--gris);display:block;font-style:italic;font-family:'Cormorant Garamond',serif}
+.plat .pts{flex:1;border-bottom:1px dotted rgba(95,70,40,.45);transform:translateY(-4px)}
+.plat .p{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--terracotta);white-space:nowrap}
+.menu-carte .pied-carte{text-align:center;font-size:12.5px;color:var(--gris);font-style:italic;margin-top:26px;line-height:1.5}
+.note-sec{text-align:center;font-size:13px;color:var(--gris);font-style:italic;max-width:64ch;margin:22px auto 0}
+
+/* ---- galerie ---- */
+.galerie{padding:0;background:var(--papier2)}
+.galerie .ruban{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px}
+.galerie .ruban>div{aspect-ratio:4/3;overflow:hidden}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.galerie .ruban>div:hover img{transform:scale(1.04)}
+@media(max-width:700px){.galerie .ruban{grid-template-columns:1fr 1fr}.galerie .ruban>div:first-child{grid-column:1/-1}}
+
+/* ---- brunch ---- */
+.brunch .encart{max-width:880px;margin:0 auto;background:var(--terracotta);color:#fbf3e7;
+  display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;padding:44px clamp(24px,5vw,54px);
+  box-shadow:0 18px 50px rgba(138,63,34,.28)}
+@media(max-width:720px){.brunch .encart{grid-template-columns:1fr;text-align:center}}
+.brunch .encart .k2{font-size:11px;letter-spacing:.38em;text-transform:uppercase;color:#f2d9a4;font-weight:500;margin-bottom:10px}
+.brunch .encart h2{color:#fbf3e7;text-align:left;margin-bottom:8px}
+@media(max-width:720px){.brunch .encart h2{text-align:center}}
+.brunch .encart h2 .script{color:#f2d9a4}
+.brunch .encart p{color:#f6e7cd;max-width:48ch}
+.brunch .prix{text-align:center}
+.brunch .prix b{font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:600;line-height:1;color:#fbf3e7}
+.brunch .prix span{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#f2d9a4;margin-top:8px}
+
+/* ---- réservation ---- */
+.resa{background:var(--papier2)}
+.resa .bloc{background:var(--carte);border:1px solid var(--filet);border-top:3px solid var(--terracotta);
+  box-shadow:0 16px 44px rgba(43,35,32,.12);padding:38px clamp(22px,4.5vw,42px);max-width:760px;margin:34px auto 0}
+.resa .ligne{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px}
+@media(max-width:680px){.resa .ligne{grid-template-columns:1fr}}
+.resa label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brun);display:block;margin-bottom:6px}
+.resa input,.resa select{width:100%;background:#fff;border:1px solid rgba(95,70,40,.35);color:var(--encre);
+  padding:12px 13px;font-family:'Jost';font-size:15px;border-radius:2px}
+.resa input:focus,.resa select:focus{outline:none;border-color:var(--terracotta)}
+.resa .envoi{width:100%;background:var(--terracotta);color:#fbf7ee;border:none;padding:16px;font-family:'Jost';
+  letter-spacing:.18em;text-transform:uppercase;font-size:13px;font-weight:500;cursor:pointer;border-radius:2px;transition:.2s}
+.resa .envoi:hover{background:var(--terracotta-f)}
+.resa .demo-note{font-size:12.5px;color:var(--gris);font-style:italic;text-align:center;margin-top:14px}
+.resa .ok{display:none;text-align:center;padding:26px 10px}
+.resa .ok .script{font-size:44px;color:var(--terracotta)}
+
+/* ---- hôtel ---- */
+.hotel .deux{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:38px}
+@media(max-width:860px){.hotel .deux{grid-template-columns:1fr}}
+.hotel .colonne .txt{text-align:left;margin:0}
+.hotel .cadre{border:1px solid var(--or);background:var(--carte);padding:44px 30px;text-align:center;position:relative}
+.hotel .cadre::before{content:'';position:absolute;inset:7px;border:1px solid rgba(168,133,63,.35);pointer-events:none}
+.hotel .cadre .script{font-size:40px;color:var(--encre);display:block;margin-bottom:4px}
+.hotel .cadre .etoiles{color:var(--or);letter-spacing:.34em;margin:10px 0;font-size:15px}
+.hotel .cadre .et{font-family:'Cormorant Garamond',serif;letter-spacing:.28em;font-size:12.5px;color:var(--brun);text-transform:uppercase}
+.hotel .cadre p{margin-top:16px;font-size:14.5px;color:#4a4038}
+.hotel .cadre a{color:var(--terracotta);text-decoration:none;font-weight:400}
+
+/* ---- avis ---- */
+.avis{background:var(--papier2)}
+.avis .grille{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+@media(max-width:760px){.avis .grille{grid-template-columns:1fr}}
+.avis blockquote{background:var(--carte);border-left:3px solid var(--terracotta);padding:22px 24px;
+  font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:#463b33;box-shadow:0 10px 30px rgba(43,35,32,.08)}
+.avis .src{font-family:'Jost';font-size:12px;color:var(--gris);font-style:normal;display:block;margin-top:10px;letter-spacing:.06em}
+.avis .badge{display:flex;justify-content:center;margin-top:30px}
+.avis .badge>div{display:inline-flex;align-items:baseline;gap:10px;border:1px solid var(--or);padding:12px 22px;background:var(--carte)}
+.avis .badge b{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--terracotta)}
+.avis .badge span{font-size:12.5px;color:var(--brun)}
+
+/* ---- accès & contact ---- */
+.acces .grille{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--filet);border:1px solid var(--filet);margin-top:36px}
+@media(max-width:760px){.acces .grille{grid-template-columns:1fr}}
+.acces .c{background:var(--carte);padding:30px 26px;text-align:center}
+.acces .c .t{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--terracotta-f);margin-bottom:12px;font-weight:500}
+.acces .c p{font-size:15px;color:#463b33}
+.acces .c a{color:var(--terracotta);text-decoration:none}
+.acces .c .note-h{font-size:12.5px;color:var(--gris);font-style:italic;margin-top:12px}
+.acces .commodites{text-align:center;margin-top:26px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--brun)}
+.acces .commodites .pt{color:var(--or);margin:0 10px}
+
+footer{background:var(--encre);color:#cfc5b6;text-align:center;padding:46px 22px 56px;margin-top:30px}
+footer .script{font-size:36px;color:#f6f0e5}
+footer .enseigne{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:#a8985f;margin-top:6px}
+footer p{font-size:12px;color:#9b9184;margin-top:14px;max-width:70ch;margin-left:auto;margin-right:auto;line-height:1.6}
+
+/* ---- reveal ---- */
+.rev{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rev.vu{opacity:1;transform:none}
+body.qa .rev{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}}
+
+/* ---- bandeau démo + pastille ---- */
+.bandeau-demo{position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(43,35,32,.95);border-top:1px solid rgba(168,133,63,.5);
+  padding:8px 14px;text-align:center;font-size:12px;color:#cfc5b6}
+.bandeau-demo b{color:#e9c891}
+.pastille-va{position:fixed;right:14px;bottom:46px;z-index:61;background:rgba(251,247,238,.95);border:1px solid var(--terracotta);
+  color:var(--terracotta-f);text-decoration:none;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  border-radius:999px;padding:9px 16px;box-shadow:0 8px 24px rgba(43,35,32,.18);transition:.2s}
+.pastille-va:hover{background:var(--terracotta);color:#fbf7ee}
+</style>
+</head>
+<body>
+
+<div class="liseret-haut"></div>
+<div class="topbar">Le Grand Hôtel · 1 Porte de Paris, 59600 Maubeuge<span class="sep">—</span><a href="tel:0327626687">03 27 62 66 87</a></div>
+
+<header class="haut" id="haut">
+  <div class="sur">Brasserie · Restaurant</div>
+  <div class="nom script">L'Endroit</div>
+  <div class="sous-nom">du Grand Hôtel de Maubeuge</div>
+  <nav class="classique">
+    <a href="#maison">La maison</a>
+    <a href="#jour">Le menu du jour</a>
+    <a href="#brunch">Le brunch</a>
+    <a href="#hotel">L'hôtel</a>
+    <a href="#acces">Accès</a>
+    <a class="resa" href="#reserver">Réserver</a>
+  </nav>
+</header>
+
+<div class="tableau rev">
+  <figure class="cadre-photo">
+    <div class="dedans"><img src="../maquette/photos/facade.jpg" alt="La façade de L'Endroit, Porte de Paris à Maubeuge"></div>
+    <figcaption>La façade, Porte de Paris — juste en face du cinéma.</figcaption>
+  </figure>
+</div>
+
+<p class="devise rev">Une brasserie française au rez-de-chaussée d'un hôtel trois étoiles :
+<em>la table en bas, la chambre au-dessus</em> — et le marché dans l'assiette.</p>
+<div class="actions rev">
+  <a class="btn plein" href="#reserver">Réserver une table</a>
+  <a class="btn vide" href="#jour">Le menu du jour</a>
+</div>
+
+<section class="maison" id="maison">
+  <div class="in">
+    <div class="k rev">La maison</div>
+    <h2 class="rev">Brasserie <span class="script">et</span> bistronomie,<br>au cœur de Maubeuge.</h2>
+    <div class="deux">
+      <div class="colonne rev">
+        <p class="txt">Cuisine de brasserie et bistronomie française : les produits du marché travaillés
+        simplement, des pièces de bœuf choisies, les fruits de mer — et les fidèles du Nord, welsh et
+        moules au maroilles. La salle rénovée reçoit quatre-vingts couverts ; aux beaux jours, la
+        terrasse s'installe devant la façade, à l'abri de ses pare-vents.</p>
+        <br>
+        <p class="txt">L'Endroit est la table du Grand Hôtel : une maison, deux étages — on y déjeune,
+        on y dîne, et l'on peut y dormir.</p>
+      </div>
+      <figure class="photo rev">
+        <img src="../maquette/photos/salle.jpg" alt="La salle de L'Endroit">
+        <figcaption>La salle — bois clair, gris doux, grandes baies.</figcaption>
+      </figure>
+    </div>
+    <div class="atouts rev">
+      <div><b>80</b><span>couverts en salle</span></div>
+      <div><b>Terrasse</b><span>d'été</span></div>
+      <div><b>Salle</b><span>climatisée</span></div>
+      <div><b>Accès</b><span>PMR</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="jour" id="jour">
+  <div class="in">
+    <div class="k rev">Le menu du jour</div>
+    <h2 class="rev">L'ardoise, <span class="script">enfin en ligne</span>.</h2>
+    <p class="txt rev">Ce que la cuisine propose aujourd'hui, lisible depuis la place, le cinéma ou la
+    chambre — mise à jour en un message. Ci-dessous, un exemple composé depuis votre carte publiée.</p>
+
+    <div class="menu-carte rev">
+      <div class="liseret-int">
+        <div class="rosace">❈ ❈ ❈</div>
+        <div class="titre">Le menu du jour</div>
+        <p class="date-note">exemple de présentation — plats &amp; prix repris de votre carte publiée</p>
+
+        <h3>Pour commencer</h3>
+        <div class="plat"><span class="n">Foie gras maison</span><span class="pts"></span></div>
+        <div class="plat"><span class="n">Saumon fumé bio, son tartare au couteau</span><span class="pts"></span></div>
+        <div class="plat"><span class="n">Plateau de fruits de mer <span class="d">selon arrivage</span></span><span class="pts"></span></div>
+
+        <h3>Les plats</h3>
+        <div class="plat"><span class="n">Potjevleesch <span class="d">et ses frites</span></span><span class="pts"></span><span class="p">13,90&nbsp;€</span></div>
+        <div class="plat"><span class="n">Bavette d'aloyau</span><span class="pts"></span><span class="p">15,90&nbsp;€</span></div>
+        <div class="plat"><span class="n">Magret de canard au miel</span><span class="pts"></span><span class="p">19,90&nbsp;€</span></div>
+        <div class="plat"><span class="n">La belle entrecôte</span><span class="pts"></span><span class="p">22,00&nbsp;€</span></div>
+        <div class="plat"><span class="n">Moules au maroilles <span class="d">— ou welsh, ou bouillabaisse</span></span><span class="pts"></span></div>
+
+        <h3>Pour finir</h3>
+        <div class="plat"><span class="n">Fondant chocolat, cœur speculoos</span><span class="pts"></span></div>
+
+        <p class="pied-carte">L'ardoise change avec le marché —<br>les plats et les prix du jour se valident ensemble avant mise en ligne.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="galerie">
+  <div class="ruban">
+    <div><img src="../maquette/photos/carte-huitres.jpg" alt="Les huîtres et la carte de L'Endroit"></div>
+    <div><img src="../maquette/photos/dessert.jpg" alt="Dessert sur ardoise"></div>
+    <div><img src="../maquette/photos/salle.jpg" alt="La salle de L'Endroit"></div>
+  </div>
+</div>
+
+<section class="brunch" id="brunch">
+  <div class="in rev">
+    <div class="encart">
+      <div>
+        <div class="k2">La formule qui rassemble</div>
+        <h2>Le brunch <span class="script">à volonté</span></h2>
+        <p>Buffet sucré-salé à volonté : viennoiseries, salé chaud, douceurs — la grande tablée,
+        version brasserie.</p>
+      </div>
+      <div class="prix"><b>30&nbsp;€</b><span>par personne · 15&nbsp;€ enfant</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="resa" id="reserver">
+  <div class="in">
+    <div class="k rev">Réservation</div>
+    <h2 class="rev">Votre table, <span class="script">réservée</span>.</h2>
+    <p class="txt rev">Aujourd'hui, réserver chez vous passe uniquement par le téléphone. Voici le
+    module qui peut compléter la ligne : le client choisit, vous recevez, c'est noté.</p>
+
+    <div class="bloc rev">
+      <form id="fresa">
+        <div class="ligne">
+          <div><label for="r-date">Date</label><input id="r-date" type="date" required></div>
+          <div><label for="r-heure">Heure</label>
+            <select id="r-heure"><option>12h00</option><option>12h30</option><option>13h00</option><option selected>19h30</option><option>20h00</option><option>20h30</option><option>21h00</option></select></div>
+          <div><label for="r-couverts">Couverts</label>
+            <select id="r-couverts"><option>2 personnes</option><option>3 personnes</option><option selected>4 personnes</option><option>6 personnes</option><option>Groupe / repas d'affaires</option></select></div>
+        </div>
+        <div class="ligne" style="grid-template-columns:1fr 1fr">
+          <div><label for="r-nom">Votre nom</label><input id="r-nom" type="text" placeholder="Nom" required></div>
+          <div><label for="r-tel">Votre téléphone</label><input id="r-tel" type="tel" placeholder="06 …" required></div>
+        </div>
+        <button class="envoi" type="submit">Demander la table</button>
+      </form>
+      <div class="ok" id="resa-ok">
+        <span class="script">C'est noté.</span>
+        <p class="txt" style="margin-top:8px">Dans la version réelle, la demande arrive chez vous
+        et le client reçoit la confirmation.</p>
+      </div>
+      <p class="demo-note">Démonstration — module optionnel, activable plus tard.
+      Ce formulaire n'envoie rien et n'enregistre rien.</p>
+    </div>
+  </div>
+</section>
+
+<section class="hotel" id="hotel">
+  <div class="in">
+    <div class="k rev">Le Grand Hôtel</div>
+    <h2 class="rev">La chambre, <span class="script">juste au-dessus</span>.</h2>
+    <div class="deux">
+      <div class="colonne rev">
+        <p class="txt">L'Endroit est la brasserie du Grand Hôtel de Maubeuge, trois étoiles, à la
+        Porte de Paris. Repas d'affaires qui se prolonge, famille de passage, étape sur la route :
+        la table et la chambre s'organisent à la même adresse, d'un seul appel.</p>
+      </div>
+      <div class="cadre rev">
+        <span class="script">Le Grand Hôtel</span>
+        <div class="etoiles">★ ★ ★</div>
+        <div class="et">1 Porte de Paris · Maubeuge</div>
+        <p>La chambre après la table —<br>renseignements au <a href="tel:0327626687">03 27 62 66 87</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="in">
+    <div class="k rev">Ils l'écrivent</div>
+    <h2 class="rev">Ce que vos clients <span class="script">saluent</span>.</h2>
+    <div class="grille">
+      <blockquote class="rev">« Les noix de saint-jacques, un vrai délice. Je recommande fortement. »
+        <span class="src">Avis publié — vos fiches en ligne</span></blockquote>
+      <blockquote class="rev">« Très bon repas, tout est fait maison, la serveuse et le responsable souriants. »
+        <span class="src">Avis publié — vos fiches en ligne</span></blockquote>
+    </div>
+    <div class="badge rev"><div><b>4,0/5</b><span>TripAdvisor · 145 avis · top 10 des restaurants de Maubeuge — relevé en juillet 2026</span></div></div>
+    <p class="note-sec rev">Avis cités depuis vos fiches publiques — sélection à valider ensemble avant mise en ligne.</p>
+  </div>
+</section>
+
+<section class="acces" id="acces">
+  <div class="in">
+    <div class="k rev">Accès &amp; contact</div>
+    <h2 class="rev">Une seule adresse, <span class="script">Porte de Paris</span>.</h2>
+    <div class="grille rev">
+      <div class="c"><div class="t">Adresse</div>
+        <p>Brasserie L'Endroit<br>Le Grand Hôtel · 1 Porte de Paris<br>59600 Maubeuge<br>— juste en face du cinéma —</p></div>
+      <div class="c"><div class="t">Réservations</div>
+        <p><a href="tel:0327626687">03 27 62 66 87</a><br>ou le module de réservation<br>de cette page</p></div>
+      <div class="c"><div class="t">Horaires</div>
+        <p>À confirmer ensemble</p>
+        <p class="note-h">Trois versions d'horaires circulent en ligne aujourd'hui — on fixe la
+        bonne, et on l'affiche partout, une fois pour toutes.</p></div>
+    </div>
+    <p class="commodites rev">Salle climatisée<span class="pt">·</span>Accès PMR<span class="pt">·</span>Terrasse d'été</p>
+  </div>
+</section>
+
+<footer>
+  <span class="script">L'Endroit</span>
+  <div class="enseigne">Brasserie · Le Grand Hôtel · Restaurant</div>
+  <p>Maquette de démonstration préparée par Everywhere, cabinet d'accompagnement numérique — à partir
+  de vos photos, de votre carte et de vos avis publiés. Non indexée, formulaires inertes, aucune donnée
+  collectée. Contenus, horaires et tarifs à valider ensemble.</p>
+</footer>
+
+<a class="pastille-va" href="../maquette/" title="La même maison, dans sa version signature">◇ Voir l'autre version</a>
+<div class="bandeau-demo"><b>Démonstration</b> — version classique préparée pour L'Endroit · rien n'est publié sans votre accord</div>
+
+<script>
+(function(){
+  var qa = /[#&](qa|y=)/.test(location.hash);
+  if(qa) document.body.classList.add('qa');
+  var els = document.querySelectorAll('.rev');
+  if('IntersectionObserver' in window && !qa){
+    var io = new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target);}});},{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  } else { els.forEach(function(el){el.classList.add('vu');}); }
+  document.getElementById('fresa').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    ev.target.style.display='none';
+    document.getElementById('resa-ok').style.display='block';
+  });
+  var m=location.hash.match(/y=(\d+)/); if(m) setTimeout(function(){scrollTo(0,+m[1]);},60);
+})();
+</script>
+</body>
+</html>

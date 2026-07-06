@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Carte NFC — L'Endroit · recto-verso 85,6 × 54 mm (démonstration)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0d0b0c;--noir2:#161314;--rouge:#b60f26;--creme:#f7f4ef;--or:#c9a24b;--gris:#b9b2ab}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',sans-serif;background:var(--noir2);color:var(--creme);font-weight:300;min-height:100vh}
+
+/* ================= ÉCRAN ================= */
+.ecran{max-width:860px;margin:0 auto;padding:44px 22px 30px;text-align:center}
+.retour{display:inline-block;text-decoration:none;color:var(--gris);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:26px;border:1px solid rgba(247,244,239,.18);border-radius:999px;padding:7px 18px;transition:.2s}
+.retour:hover{color:var(--creme);border-color:var(--or)}
+.sur{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--or);margin-bottom:8px}
+h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(22px,3.4vw,30px);line-height:1.2;color:#ded7cd}
+h1 .script{font-family:'Great Vibes',cursive;font-weight:400;color:var(--creme);font-size:1.5em}
+.sous{margin:12px auto 8px;color:var(--gris);max-width:58ch;font-size:14.5px;line-height:1.6}
+.format{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8a827a;margin-bottom:34px}
+.etiquette{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--or);margin:34px 0 14px}
+.scene{display:flex;justify-content:center}
+.imprimer{display:inline-block;margin-top:38px;background:var(--rouge);color:#fff;border:none;padding:15px 34px;
+  font-family:'Jost';letter-spacing:.18em;text-transform:uppercase;font-size:13px;font-weight:500;cursor:pointer;border-radius:2px;transition:.2s}
+.imprimer:hover{background:#d5203a}
+.notes{margin:30px auto 0;max-width:60ch;text-align:left;font-size:13px;color:var(--gris);line-height:1.7;
+  border:1px solid rgba(247,244,239,.12);padding:20px 24px}
+.notes b{color:#ded7cd;font-weight:500}
+.notes .t{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--or);display:block;margin-bottom:8px}
+.pied{margin-top:30px;font-size:12px;color:#7c756d}
+
+/* ================= LA CARTE (recto & verso) ================= */
+.face{width:85.6mm;height:54mm;position:relative;overflow:hidden;background:var(--noir);color:var(--creme);
+  border-radius:3mm;box-shadow:0 14px 40px rgba(0,0,0,.55)}
+.face .fil{position:absolute;inset:2.6mm;border:.28mm solid rgba(201,162,75,.75);border-radius:1.8mm;pointer-events:none}
+
+/* — recto — */
+.recto{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  background:radial-gradient(120% 90% at 50% -12%,rgba(182,15,38,.32),transparent 55%),var(--noir)}
+.recto .medaillon{width:13mm;height:13mm;border-radius:50%;border:.3mm solid var(--or);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;background:radial-gradient(circle at 50% 38%,rgba(22,19,20,.6),rgba(13,11,12,.8));margin-bottom:2.4mm}
+.recto .medaillon .m-s{font-family:'Great Vibes',cursive;font-size:5.4mm;line-height:.9;color:var(--or)}
+.recto .medaillon .m-t{font-family:'Cormorant Garamond',serif;font-size:1.15mm;letter-spacing:.26em;text-transform:uppercase;color:var(--gris);margin-top:.5mm}
+.recto .nom{font-family:'Great Vibes',cursive;font-size:10.5mm;line-height:1;color:var(--creme)}
+.recto .surtitre{font-family:'Cormorant Garamond',serif;font-size:2mm;letter-spacing:.42em;text-transform:uppercase;color:var(--gris);margin-top:1.6mm}
+.recto .surtitre b{color:var(--or);font-weight:500}
+.recto .liseret{position:absolute;left:0;right:0;bottom:0;height:.9mm;
+  background:linear-gradient(90deg,transparent,var(--rouge) 22%,var(--rouge) 78%,transparent)}
+
+/* — verso — */
+.verso{display:flex;align-items:center;gap:4.6mm;padding:6mm 6.4mm}
+.verso .qr{flex-shrink:0;width:27mm;height:27mm;background:var(--creme);border-radius:1.6mm;display:flex;align-items:center;justify-content:center}
+.verso .qr img{width:24mm;height:24mm;display:block}
+.verso .tx{flex:1;text-align:left}
+.verso .tx .accroche{font-family:'Great Vibes',cursive;font-size:5.6mm;line-height:1;color:var(--or);margin-bottom:1.6mm}
+.verso .tx .mode{font-size:2.35mm;line-height:1.5;color:#ded7cd}
+.verso .tx .filet{width:10mm;height:.22mm;background:var(--or);opacity:.7;margin:2mm 0}
+.verso .tx .coord{font-size:2.35mm;line-height:1.55;color:var(--gris)}
+.verso .tx .coord b{color:var(--creme);font-weight:500}
+.verso .tx .tel{font-family:'Cormorant Garamond',serif;font-size:3.1mm;color:var(--or);letter-spacing:.06em;margin-top:1.2mm}
+.verso .puce-nfc{position:absolute;top:3.8mm;right:4.6mm;font-size:1.7mm;letter-spacing:.3em;text-transform:uppercase;color:rgba(201,162,75,.85)}
+
+/* ================= IMPRESSION ================= */
+@media print{
+  @page{size:85.6mm 54mm;margin:0}
+  body{background:#fff}
+  .ecran-seul,.retour,.imprimer,.notes,.etiquette,.pied{display:none!important}
+  .ecran{max-width:none;padding:0;margin:0}
+  .scene{display:block}
+  .face{border-radius:0;box-shadow:none;margin:0;page-break-after:always;break-after:page}
+  .scene:last-of-type .face{page-break-after:auto;break-after:auto}
+  .face .fil{display:block}
+}
+@media(max-width:400px){.face{transform:scale(.86);transform-origin:top center}}
+</style>
+</head>
+<body>
+
+<div class="ecran">
+  <div class="ecran-seul">
+    <a class="retour" href="../">← Retour à la démonstration</a>
+    <div class="sur">Pack de bienvenue — aperçu</div>
+    <h1>La carte NFC de <span class="script">L'Endroit</span></h1>
+    <p class="sous">La carte se pose près de la caisse ou sur le comptoir de l'hôtel : on l'approche
+    du téléphone — ou l'on scanne le code — et la maison s'ouvre. Recto à l'identité de la façade,
+    verso pratique.</p>
+    <div class="format">Format CR80 · 85,6 × 54 mm · recto-verso</div>
+  </div>
+
+  <div class="etiquette ecran-seul">Recto</div>
+  <div class="scene">
+    <div class="face recto">
+      <div class="fil"></div>
+      <div class="medaillon"><span class="m-s">L'E</span><span class="m-t">Est. Maubeuge</span></div>
+      <div class="nom">L'Endroit</div>
+      <div class="surtitre">Brasserie · <b>Le Grand Hôtel</b> · Restaurant</div>
+      <div class="liseret"></div>
+    </div>
+  </div>
+
+  <div class="etiquette ecran-seul">Verso</div>
+  <div class="scene">
+    <div class="face verso">
+      <div class="fil"></div>
+      <span class="puce-nfc">NFC · QR</span>
+      <div class="qr"><img src="qr-lendroit.png" alt="QR code vers le site de L'Endroit"></div>
+      <div class="tx">
+        <div class="accroche">La maison s'ouvre.</div>
+        <div class="mode">Approchez la carte de votre téléphone,<br>ou scannez le code.</div>
+        <div class="filet"></div>
+        <div class="coord"><b>Brasserie L'Endroit — Le Grand Hôtel</b><br>1 Porte de Paris · 59600 Maubeuge</div>
+        <div class="tel">03 27 62 66 87</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ecran-seul">
+    <button class="imprimer" onclick="window.print()">Imprimer la carte (2 pages)</button>
+    <div class="notes">
+      <span class="t">Notes d'impression &amp; de pose</span>
+      <b>Impression :</b> deux pages au format exact 85,6 × 54 mm (page 1 recto, page 2 verso),
+      marges à zéro, échelle 100 % — selon l'imprimeur, prévoir un fond perdu de 3 mm.<br>
+      <b>Le code :</b> il pointe aujourd'hui vers cette démonstration ; après validation, il pointera
+      vers votre adresse définitive — la carte, elle, ne change pas.<br>
+      <b>La puce NFC :</b> encodée sur la même adresse que le code, réinscriptible.
+    </div>
+    <p class="pied">Aperçu de démonstration Everywhere — non indexé, aucune donnée collectée.</p>
+  </div>
+</div>
+
+</body>
+</html>
